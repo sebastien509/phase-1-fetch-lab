@@ -1,6 +1,6 @@
 function fetchBooks() {
   // To pass the tests, don't forget to return your fetch!
-  return fetch('https://anapioficeandfire.com/api/books') // Add return here
+  return fetch('https://anapioficeandfire.com/api/books') 
     .then(response => response.json())
     .then(data => {
       renderBooks(data);
@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function renderBooks(books) {
   const bookList = document.getElementById('book-list');
-  bookList.innerHTML = ''; // Clear existing content
+  bookList.innerHTML = ''; 
   books.forEach(book => {
     const listItem = document.createElement('li');
-    listItem.textContent = book.name; // Assuming the book object has a 'name' property
+    listItem.textContent = book.name; 
     bookList.appendChild(listItem);
   });
 }
